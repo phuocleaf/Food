@@ -18,8 +18,6 @@ import com.example.foodapp.ui.FoodDetailActivity
 import com.example.foodapp.viewmodel.HomeViewModel
 import java.util.Locale
 
-///clone
-
 class HomeFragment : Fragment() {
 
     private lateinit var binding:FragmentHomeBinding

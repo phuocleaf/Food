@@ -7,6 +7,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.foodapp.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+/*
+    food cs
+ */
 
 class MainActivity : AppCompatActivity() {
 
