@@ -63,20 +63,18 @@ class FoodDetailActivity : AppCompatActivity() {
                             isExist = true
                             cartList[i].quantity += cart.quantity
                             Paper.book().write("cart",cartList)
-                            Toast.makeText(this,cartList[i].food_name +" "+ cartList[i].quantity,Toast.LENGTH_SHORT).show()
                         }
                     }
                     if(!isExist){
                         cartList.add(cart)
                         Paper.book().write("cart",cartList)
-                        Toast.makeText(this,cartList.size.toString(),Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{
                     cartList.add(cart)
                     Paper.book().write("cart",cartList)
-                    Toast.makeText(this,"Added to cart",Toast.LENGTH_SHORT).show()
                 }
+                Toast.makeText(this,"Đã thêm vào giỏ",Toast.LENGTH_LONG).show()
                 startActivity(intent)
                 finish()
             }

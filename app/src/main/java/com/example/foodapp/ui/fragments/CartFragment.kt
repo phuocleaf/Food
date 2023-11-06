@@ -45,6 +45,12 @@ class CartFragment : Fragment() {
     private fun initView() {
         Paper.init(requireContext())
         cartList = Paper.book().read("cart", mutableListOf())!!
+        var total = 0
+        for (i in cartList){
+            total += i.food_price * i.quantity
+        }
+        binding.txtmoney.text = total.toString()
+        total = 0
         cartAdapter = CartAdapter(object : ChangeNumListener{
             override fun changeNum(position: Int, isAdd: Boolean) {
                 if (isAdd){
@@ -59,10 +65,15 @@ class CartFragment : Fragment() {
                 }
                 Paper.book().write("cart",cartList)
                 cartAdapter.setDataCart(cartList as ArrayList<Cart>)
+
+                for (i in cartList){
+                    total += i.food_price * i.quantity
+                }
+                binding.txtmoney.text = total.toString()
+                total = 0
             }
 
         })
-
 
         cartAdapter.setDataCart(cartList as ArrayList<Cart>)
         binding.rvCart.adapter = cartAdapter

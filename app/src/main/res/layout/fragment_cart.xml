@@ -29,13 +29,37 @@
         app:layout_constraintBottom_toTopOf="@id/btnbuy"
         />
 
+    <TextView
+        android:id="@+id/txttotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền: "
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/txtmoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200000"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txttotal"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
     <Button
         android:id="@+id/btnbuy"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Mua hàng"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtmoney"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginBottom="5dp"
         />
