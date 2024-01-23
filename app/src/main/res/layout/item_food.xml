@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="10dp"
 
@@ -9,7 +10,7 @@
     android:layout_height="wrap_content">
     
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:background="#CCE1E4"
+        android:background="#CCE4DE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -30,22 +31,23 @@
             android:id="@+id/txtfoodname"
             android:text="Gà Chiên Nước Mắm"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/imgfood"
             />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/txtfoodprice"
             android:text="50000"
             app:layout_constraintTop_toBottomOf="@id/txtfoodname"
-            android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:textStyle="bold"
+            android:layout_marginLeft="20dp"
             app:layout_constraintStart_toEndOf="@id/imgfood"
             />
 
